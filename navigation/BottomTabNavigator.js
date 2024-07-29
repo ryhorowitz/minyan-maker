@@ -15,7 +15,7 @@ export default function BottomTabNavigator() {
         tabBarIcon: ({ color, size }) => {
           let iconName;
           if (route.name === 'Home') {
-            iconName = 'ios-home';
+            iconName = 'home-outline';
           } else if (route.name === 'Settings') {
             iconName = 'ios-settings';
           } else if (route.name === 'Confirm') {
