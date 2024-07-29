@@ -17,9 +17,9 @@ export default function BottomTabNavigator() {
           if (route.name === 'Home') {
             iconName = 'home-outline';
           } else if (route.name === 'Settings') {
-            iconName = 'ios-settings';
+            iconName = 'settings-outline';
           } else if (route.name === 'Confirm') {
-            iconName = 'ios-checkmark-circle';
+            iconName = 'checkmark-circle-outline';
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
