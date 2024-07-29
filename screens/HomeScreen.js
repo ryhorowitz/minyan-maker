@@ -5,13 +5,15 @@ import LoginScreen from './LoginScreen';
 import SignupScreen from './SignupScreen';
 import { View, Text, StyleSheet } from 'react-native';
 
+const Stack = createNativeStackNavigator();
+
 export default function HomeScreen() {
   return (
     // <View style={styles.container}>
     //   <Text style={styles.title}>Home/About Page</Text>
     //   <Text>Welcome to the app! This is the Home/About page.</Text>
     // </View>
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
