@@ -12,7 +12,7 @@ export default function SignupScreen({ navigation }) {
       alert("Passwords do not match");
       return;
     }
-    axios.post('http://your-rails-api-url/users', {
+    axios.post('http://127.0.0.1:3000/users', {
       user: {
         email,
         password,
@@ -23,7 +23,7 @@ export default function SignupScreen({ navigation }) {
         // Save the JWT token or navigate to the login screen
       })
       .catch(error => {
-        console.error(error);
+        console.error('ERROR', error);
       });
   };
 

@@ -14,6 +14,7 @@ export default function LoginScreen({ navigation }) {
       }
     })
       .then(response => {
+        console.log('what do now');
         console.log(response.data);
         // Save the JWT token or navigate to the next screen
       })
