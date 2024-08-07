@@ -7,7 +7,8 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    axios.post('127.0.0.1.:3000/sign_in', {
+    console.log('handle login triggered in react native')
+    axios.post('127.0.0.1:3000/sign_in', {
       user: {
         email,
         password,
@@ -19,12 +20,14 @@ export default function LoginScreen({ navigation }) {
         // Save the JWT token or navigate to the next screen
       })
       .catch(error => {
+        console.log('in the login catch block');
         console.error(error);
       });
   };
 
   return (
     <View style={styles.container}>
+      <Text>Hello Test</Text>
       <TextInput
         style={styles.input}
         placeholder="Email"
